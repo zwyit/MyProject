@@ -46,7 +46,7 @@ public class AddProductServlet extends HttpServlet {
 		Integer category_id=Integer.parseInt(request.getParameter("category_id"));
 		Integer brand_id=Integer.parseInt(request.getParameter("brand_id"));
 		String product_des=request.getParameter("remark");
-				
+			
 		Product product=new Product();
 		product.setName(name);
 		product.setCode(code);
@@ -56,6 +56,7 @@ public class AddProductServlet extends HttpServlet {
 		product.setCategory_id(category_id);
 		product.setBrand_id(brand_id);
 		product.setProduct_des(product_des);
+		
 		productService.save(product);
 		
 		request.getRequestDispatcher("QueryProductServlet").forward(request, response);

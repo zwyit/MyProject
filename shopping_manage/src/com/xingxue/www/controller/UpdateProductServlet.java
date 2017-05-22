@@ -41,8 +41,8 @@ public class UpdateProductServlet extends HttpServlet {
 		Integer status=Integer.parseInt(request.getParameter("status"));
 		Integer category_id=Integer.parseInt(request.getParameter("category_id"));
 		Integer brand_id=Integer.parseInt(request.getParameter("brand_id"));
-		String product_des=request.getParameter("product_des");
-		
+		String product_des=request.getParameter("remark");
+
 		Product product=new Product();
 		product.setId(id);
 		product.setName(name);

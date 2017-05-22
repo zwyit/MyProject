@@ -17,7 +17,6 @@ public class Product implements Serializable{
 	private Integer category_id;//商品类别的id,
 	private Integer brand_id;//商品品牌id 
 	
-	
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", code=" + code

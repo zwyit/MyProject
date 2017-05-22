@@ -20,7 +20,8 @@ public class ProductDAOImpl implements ProductDAO {
 
 	@Override
 	public void update(Product product) {
-		JdbcUtil.update("update t_product set name=?,code=?,price=?,count=?,status=?,category_id=?,brand_id=?,product_desc=? where id=?", product.getName(),product.getCode(),product.getPrice(),product.getCount(),product.getStatus(),product.getCategory_id(),product.getBrand_id(),product.getProduct_des(),product.getId());
+//		JdbcUtil.update("update t_product set name=?,code=?,price=?,count=?,status=?,category_id=?,brand_id=?,product_des=? where id=?", product.getName(),product.getCode(),product.getPrice(),product.getCount(),product.getStatus(),product.getCategory_id(),product.getBrand_id(),product.getProduct_des(),product.getId());
+		JdbcUtil.update("update t_product set name=?,code=?,price=?,count=?,status=?,category_id=?,brand_id=?,product_des=? where id=?", product.getName(),product.getCode(),product.getPrice(),product.getCount(),product.getStatus(),product.getCategory_id(),product.getBrand_id(),product.getProduct_des(),product.getId());
 	}
 
 	@Override
@@ -33,7 +34,7 @@ public class ProductDAOImpl implements ProductDAO {
 		return JdbcUtil.findOne(Product.class, "select * from t_product where id=?", id);
 	}
 	
-	/*public static void main(String[] args) {
+/*	public static void main(String[] args) {
 		List<Product> products=JdbcUtil.findList(Product.class, "select * from t_product");
 		for(Product p:products){
 			System.out.println(p);

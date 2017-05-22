@@ -59,6 +59,16 @@
 		   
 		   window.location.href="product_add.jsp";
 	   }
+	   
+	   
+   
+	  <%--  function disp_confirm(){
+		   var r=confirm("确定要删除吗？");
+		   if (r==true)
+		     {
+			 window.location.href="DeleteProductServlet?id=<%${product.id}%>";
+		     }
+	   } --%>
 	
 	</script>
 
@@ -883,7 +893,7 @@
 									<tbody>
 									
 										<c:forEach items="${products}" var="product">
-											<tr>
+											<tr align="center" valign="middle">
 												<td>
 												<img src="media/image/jwj.png"></img>
 												<a href="#">${product.name}</a>
@@ -902,7 +912,8 @@
 												</td>
 												
 												<td class="center hidden-480">
-												<a href="DeleteProductServlet?id=${product.id}">删除</a>
+												<%-- <a onclick="disp_confirm()" href="DeleteProductServlet?id=${product.id}">删除</a> --%>
+												<a onclick="disp_confirm()" href="DeleteProductServlet?id=${product.id}">删除</a>
 												<a href="PreparedUpdateProductServlet?id=${product.id}">修改</a>
 												</td>	
 											</tr>

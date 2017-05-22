@@ -67,7 +67,7 @@
                <tr>
                   <td>商品描述</td>
                   <td>
-                    <textarea rows="10" cols="27" id="remark" name="remark">${product.product_des}</textarea>
+                     <textarea rows="10" cols="27" id="remark"  name="remark">${product.product_des}</textarea>
                   </td>
                </tr>
                <tr>
