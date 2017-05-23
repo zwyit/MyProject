@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+.nnml-div{ background: url(../images/main-bg01_02.jpg) no-repeat; height:915px; width:100%; min-width:1366px; background-size:cover; }
+.media{position:absolute; top:20px; left:25px; left:25px\9; left:10px\0; *left:10px; width:290px;
+}
+@media all and (min-width:0){.media{left:25px\9}}
+.media h3{ background: url(../images/media.png) left top no-repeat; padding-left:40px; height:40px; line-height:40px; font-size:26px; font-family:microsoft yahei; font-weight: normal; color:#373737; }
+.media-img{margin-top:20px;}
+.media-img p{ margin-top:10px;}
+.media-img p a{ font-size:16px; color:#ef0600;}
+.media-list{ margin-top:15px;}
+.media-list ul li{ line-height:28px; font-size:14px; background:url(../images/dot01.png) left center no-repeat; padding-left:5px;}
+.media-list ul li a{ color:#676767; text-decoration:none;}
+.media-list ul li a:hover{ color:#ef0600;}
+.btn-more{ width:150px; height:30px; border-radius:5px; text-align:center; color:#FFF; background:#ba1814; margin:0 auto;}
+.media-btn{width:150px; margin:0 auto; margin-top:30px; margin-top:20px\0; *margin-top:20px;}
+.public{position:absolute; top:20px; left:350px; left:350px\9; left:325px\0; *left:325px; width:290px;}
+@media all and (min-width:0){.public{left:350px\9}}
+.video{position:absolute; top:20px; left:680px; left:680px\9; left:645px\0; *left:645px; width:290px;}
+@media all and (min-width:0){.video{left:680px\9}}
+.public h3{ background: url(../images/public.png) left center no-repeat; padding-left:50px; height:40px; line-height:40px; font-size:26px; font-family:microsoft yahei; font-weight: normal; color:#373737; }
+.video h3{ background: url(../images/video.png) left top no-repeat; padding-left:50px; height:40px; line-height:44px; font-size:26px; font-family:microsoft yahei; font-weight: normal; color:#373737; }
+.nnml-cont01{ position:absolute; top:617px;left:-5px;top:617px\9;left:-5px\9;top:592px\0;left:-15px\0;*top:607px;*left:-15px; width:320px;}
+.nnml-cont01 h3{ text-align:center; font-family:microsoft yahei; margin-bottom:40px; font-weight:normal; color:#fff;}
+.nnml-cont01 p{font-family:microsoft yahei; line-height:32px; color:#fff; font-size:18px;}
+.nnml-cont02{ position:absolute; top:617px;left:340px;top:617px\9;left:340px\9;top:592px\0;left:320px\0; *top:607px;*left:320px; width:320px;}
+.nnml-cont02 h3{ text-align:center; font-family:microsoft yahei; margin-bottom:40px; font-weight:normal; color:#fff;}
+.nnml-cont02 p{font-family:microsoft yahei; line-height:32px; color:#fff; font-size:18px;}
+.nnml-cont03{ position:absolute; top:617px;left:690px; top:617px\9;left:690px\9;top:592px\0;left:653px\0;*top:607px;*left:655px; width:320px;}
+.nnml-cont03 h3{ text-align:center; font-family:microsoft yahei; margin-bottom:40px; font-weight:normal; color:#fff;}
+.nnml-cont03 p{font-family:microsoft yahei; line-height:32px; color:#fff; font-size:18px;}
+
+.nnml-ads{width:1000px; margin:0 auto;}
+.ads-left-tit{ width:220px; float:left; line-height:69px; font-size:20px; background: url(../images/icon-gg.png) 130px center no-repeat}
+.ads-right{ width:720px; float:left;}
+
+
+

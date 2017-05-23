@@ -1,0 +1,540 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/lrtk1.css">
+<link rel="stylesheet" href="css/main1.css">
+<script src="js/hashtabber.js"></script>
+<style>
+*{padding:0; margin:0;}
+ol, ul {list-style: none;}
+img{border:0;}
+body{ font-family:microsoft yahei; font-size:14px; background:#f7f7f7;}
+a { color:#343434; text-decoration:none;}
+a:hover { color:#ba1814; text-decoration:none;}
+.clear{ clear:both;}
+.order-cont{width:998px; border:998px; border:1px solid #dbd6d0; background:#FFF; margin:0 auto; margin-top:10px;}
+.order-cont .order-cont-left{ width:170px; float:left; border-right:1px solid #dbd6d0;}
+.order-cont .order-cont-right{ width:827px; float:right;}
+.order-user{padding:10px;}
+.order-photo{float:left; padding-right:5px; width:70px;}
+.order-xinxi{ float:left; width:70px;}
+.list-nav li{ background: url(images/left_nav_icons.png)8px 3px no-repeat; padding-left:30px; line-height:30px;}
+.list-nav{ margin-top:10px; margin-bottom:10px;}
+.right-nav{ margin:20px; border-top:1px solid #dbd6d0;border-left:1px solid #dbd6d0; height:40px; line-height:40px; width:471px; border-right:0; border-bototm:0; margin-bottom:0;}
+.right-nav li{ float:left;  border-right:1px solid #dbd6d0; }
+.right-table{ margin-left:20px; border-left:1px solid #dbd6d0; border-top:1px solid #dbd6d0; margin-right:20px; width:787px;}
+.right-table tr td{ border-right:1px solid #dbd6d0; text-align:center; border-bottom:1px solid #dbd6d0;}
+.right-nav li a{ background:#fff; display:block;padding:0 20px;}
+.right-nav li a:hover{ background:#f8f6f4; display:block;padding:0 20px;}
+.fenye{ float:right; background:#FFF; text-align:right; border-left:1px solid #EEEDED; margin-bottom:20px; margin-top:20px; margin-right:10px;}
+.fenye ul li{ color:#333; float:left; margin-right:10px;}
+.fenye ul li a{ text-decoration:none; border:1px solid #d9d9d9; display:inline-block; padding:5px 10px; color:#333;}
+.fenye ul{ float:right;}
+.fenye ul li a:hover{border:1px solid #ba1814; display:inline-block;}
+.fenye ul li.sel a{ background:#333; border:1px solid  #333; color:#FFF;}
+.link{ width:100%; margin-top:20px; background:#FFF; border-top:1px solid #ccc;}
+.link ul{width:1000px; margin:0 auto; margin-top:10px; }
+.link ul li{ float:left; margin-right:15px; line-height:24px;}
+.footer{  background:url(images/footer_dy.jpg) center top no-repeat; width:100%; background-size:cover; height:95px;}
+.footer p{ text-align:center; padding-top:60px;}
+#nav {
+
+width:220px;
+
+    line-height: 24px;
+
+list-style-type: none;
+
+text-align:left;
+
+    /*定义整个ul菜单的行高和背景色*/
+
+}
+
+/*==================一级目录===================*/
+
+#nav a {
+
+width: 220px;
+
+display: block;
+
+padding-left:20px;
+
+/*Width(一定要)，否则下面的Li会变形*/
+
+}
+
+#nav li {
+
+border-bottom:#FFF 1px solid; /*下面的一条白边*/
+
+float:left;
+
+background-color: #FECFD6;
+
+color:#DD1336;
+
+font-weight:bold;
+
+background: url(../images/dot_o.gif) no-repeat 8px 8px;
+
+}
+
+#nav li a:hover{
+
+background:#ba1814; /*一级目录onMouseOver显示的背景色*/
+
+}
+
+#nav a:link {
+
+color:#DD1336; text-decoration:none;
+
+}
+
+#nav a:visited {
+
+color:#DD1336;text-decoration:none;
+
+}
+
+#nav a:hover {
+
+color:#FFF;text-decoration:none;font-weight:bold;
+
+}
+
+/*==================二级目录===================*/
+
+#nav li ul {
+
+list-style:none;
+
+text-align:left;
+
+}
+
+#nav li ul li{
+
+background: #F5F5F5; /*二级目录的背景色*/
+
+font-weight:normal;
+
+}
+
+#nav li ul a{
+
+         padding-left:10px;
+		font-size:14px; 
+		line-height:30px;
+         width:220px;
+
+/* padding-left二级目录中文字向右移动，但Width必须重新设置=(总宽度-padding-left)*/
+
+}
+
+/*下面是二级目录的链接样式*/
+
+#nav li ul a:link {
+
+color:#666; text-decoration:none;
+
+}
+
+#nav li ul a:visited {
+
+color:#666;text-decoration:none;
+
+}
+
+#nav li ul a:hover {
+
+color:#F3F3F3;
+
+text-decoration:none;
+
+font-weight:normal;
+
+background:#FFAA1C;
+
+/* 二级onmouseover的字体颜色、背景色*/
+
+}
+
+/*==============================*/
+
+#nav li:hover ul {
+
+left: auto;
+
+}
+
+#nav li.sfhover ul {
+
+left: auto;
+
+}
+
+#content {
+
+clear: left;
+
+}
+
+#nav ul.collapsed {
+
+display: none;
+
+}
+
+-->
+
+#PARENT{
+
+
+
+}
+.tishi{ color:#999999;}
+.zl-text{width:323px; height:25px; border:1px solid #cdcecd; padding-left:5px;}
+.zl-name{ width:143px; height:24px; border:1px solid #cdcecd; padding-left:5px;}
+.sel-xz01{ width:180px; height:23px; border:1px solid #cdcecd;}
+.sel-xz02{ width:130px; height:23px; border:1px solid #cdcecd;}
+.xg-text{width:225px; padding-left:5px; height:30px; line-height:30px; border:1px solid #cdcecd; }
+</style>
+<link href="css/reset.css" type="text/css" rel="stylesheet"/>
+<link href="css/login.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<span style="right:350px; top:10px; position:absolute;"><a href="index-nn.html">暖暖魔力</a></span>
+<span style="right:320px; top:10px; position:absolute;"><a href="login.html">登录</a></span><span style="right:260px; top:10px; position:absolute;"><a href="zhuce.html">|&nbsp;&nbsp;注册&nbsp;&nbsp;|&nbsp;</a></span><span style="right:210px; top:10px; position:absolute;"><a href="cart.html">购物车</a></span><span style="right:145px; top:10px; position:absolute;"><a href="order.html">我的订单</a></span>
+<span style="right:100px; top:10px; position:absolute;"><a href="sc.html">收藏夹</a></span>
+<div class="login-header">
+	<div class="logo-img"><a href="#"><img src="images/logo.png" /></a></div>
+        <div class="logo-wz"><a href="#">暖暖魔力官方网站<br /><span style="font-size:13px; line-height:24px; display:block;">官方唯一授权旗舰店  100%正品保证</span></a></div>
+        <div class="DivClear"></div>
+</div>
+
+<div style="width:1000px;margin:0 auto;">
+<section class="example">
+	<section class="hashTabber-sandstone-wrapper" id="PARENT" style="overflow:hidden;min-height:580px;">
+    <ol class="hashTabber-nav hashTabber-sandstone" data-hashtabber-id="dinosaurs" data-hashtabber-default="pterosaur" id="nav" style="margin-bottom:-9999px;padding-bottom:9999px;">
+            <li data-hashtabber-pair="trilobite" class="">
+                <a href="#" href="#Menu=ChildMenu1" onClick="DoMenu('ChildMenu1')">个人资料</a>
+               
+            </li>
+            <li data-hashtabber-pair="pterosaur" class="">
+                <a href="#dinosaurs=pterosaur" onClick="DoMenu('ChildMenu3')">修改资料</a>
+                
+            </li>
+            <li data-hashtabber-pair="lambeosaurus" class="">
+                <a href="#dinosaurs=lambeosaurus" onClick="DoMenu('ChildMenu4')">Lambeosaurus </a>
+               
+            </li>
+            <li data-hashtabber-pair="eoraptor" class=" active">
+                <a href="#dinosaurs=eoraptor" onClick="DoMenu('ChildMenu5')">Eoraptor</a>
+               
+
+            </li>
+    </ol><!--
+ --><ol class="hashTabber-data hashTabber-sandstone" data-hashtabber-id="dinosaurs" style="margin-bottom:-9999px;padding-bottom:9999px;">
+            <li data-hashtabber-pair="trilobite" class="">
+                <article>
+                    <h3 style=" text-align:left; margin-top:20px; font-size:14px; ">Trilobite</h3>
+                   	<table cellpadding="0" cellspacing="0" border="0" width="90%" style="margin-left:30px; margin-top:20px; ">
+                    	<tr height="50">
+                        	<td colspan="4">亲爱的********，填写真实的资料，有助于好有找到你哦</td>
+                        </tr>
+                    	<tr height="50" valign="bottom">
+                        	<td><span class="tishi">*</span>昵称：</td>
+                            <td colspan="3"><input type="text" class="zl-text" /></td>
+                        </tr>
+                        <tr valign="top" height="30">
+                        	<td valign="top" colspan="4" style="color:#999999; padding-left:15%;">*昵称填写须知：昵称填写须知昵称填写须知</td>
+                        </tr>
+                        <tr height="40">
+                        	<td>真实姓名：</td>
+                            <td><input type="text" class="zl-name"/></td>
+                        </tr>
+                        <tr height="40">
+                        	<td><span class="tishi">*</span>性别：</td>
+                            <td>
+                            	<label style="padding-right:30px;"><input type="radio" name="sex" value="male" /><span>男</span></label>
+                                <label><input type="radio" name="sex" value="fel" /><span>女</span></label>
+                            </td>
+                        </tr>
+                        <tr height="40">
+                        	<td width="13%">居住地</td>
+                            <td width="30%">
+                            	<select class="sel-xz01">
+                                	<option>111222333</option>
+                                    <option>111222333</option>
+                                    <option>111222333</option>
+                                </select>
+                            </td>
+                            <td width="20%">
+                            	<select class="sel-xz02">
+                                	<option>111222333</option>
+                                    <option>111222333</option>
+                                    <option>111222333</option>
+                                </select>
+                            </td>
+                             <td width="25%">
+                            	<select class="sel-xz02">
+                                	<option>111222333</option>
+                                    <option>111222333</option>
+                                    <option>111222333</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr height="60">
+                        	<td>家乡</td>
+                            <td>
+                            	<select class="sel-xz01">
+                                	<option>111222333</option>
+                                    <option>111222333</option>
+                                    <option>111222333</option>
+                                </select>
+                            </td>
+                            <td>
+                            	<select class="sel-xz02">
+                                	<option>111222333</option>
+                                    <option>111222333</option>
+                                    <option>111222333</option>
+                                </select>
+                            </td>
+                             <td>
+                            	<select class="sel-xz02">
+                                	<option>111222333</option>
+                                    <option>111222333</option>
+                                    <option>111222333</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr height="100">
+                        	<td colspan="4" style="padding-left:13%;"><input type="button" value="保存" style="width:100px;height:28px; text-align:center; line-height:28px; color:#fff; font-size:14px; background:#BA1814; border:0; cursor: pointer;"/></td>
+                        </tr>
+                    </table>
+                </article>
+            </li>
+            <li data-hashtabber-pair="velociraptor" class="">
+                <article>
+                    <h3>Velociraptor</h3>
+                    
+                </article>
+            </li>
+        
+            <li data-hashtabber-pair="pterosaur" class="">
+                <article>
+                    <h3 style=" text-align:left; margin-top:20px; font-size:14px; ">Pterosaur</h3>
+                    <table cellpadding="0" cellspacing="0" border="0" width="60%" style="margin:0 auto; margin-top:40px;">
+                    	<tr height="50">
+                        	<td>帐号：</td>
+                            <td><input type="text" class="xg-text"/></td>
+                        </tr>
+                        <tr height="50">
+                        	<td>旧密码：</td>
+                            <td><input type="text" class="xg-text" /></td>
+                        </tr>
+                        <tr height="50">
+                        	<td>充值密码：</td>
+                            <td><input type="text" class="xg-text" /></td>
+                        </tr>
+                    </table>
+                </article>
+            </li>
+            <li data-hashtabber-pair="lambeosaurus" class="">
+                <article>
+                    <h3>Lambeosaurus magnicristatus</h3>
+                    <p>Lambeosaurus is a genus of hadrosaurid dinosaur that lived about 76 to 75 million years ago, in the Late Cretaceous period (Campanian) of North America. This bipedal/quadrupedal, herbivorous dinosaur is known for its distinctive hollow cranial crest, which in the best-known species resembled a hatchet. Several possible species have been named, from Canada, the United States, and Mexico, but only the two Canadian species are currently recognized as valid.</p>
+                </article>
+            </li>
+        
+            <li data-hashtabber-pair="eoraptor" class=" active">
+                <article>
+                    <h3>Eoraptor</h3>
+                    <p>Eoraptor was one of the world's earliest dinosaurs that lived ca. 231.4 million years ago, during the latter part of the Triassic Period in Western Gondwana, what is now the northwestern region of Argentina. It was a small sized (1 m (3.3 ft) long), lightly-built, ground-dwelling, two-legged bipedal saurischian, close to the ancestry of both theropods and sauropodomorphs. It is known from several well-preserved skeletons. When first described in 1993, it was considered to be one of the earliest, if not the earliest known dinosaur. Eoraptor has heterodont dentition, suggesting that it was omnivorous, and that this feeding strategy had evolved early on in dinosaurs.</p>
+                </article>
+            </li>
+    </ol>
+	</section>
+</section>
+</div>
+<script>
+var tabber = new HashTabber();
+tabber.run();
+</script>
+<!-- 代码 结束 -->
+ <script type=text/javascript><!--
+
+var LastLeftID = "";
+
+function menuFix() {
+
+var obj = document.getElementById("nav").getElementsByTagName("li");
+
+for (var i=0; i<obj.length; i++) {
+
+   obj[i].onmouseover=function() {
+
+    this.className+=(this.className.length>0? " ": "") + "sfhover";
+
+   }
+
+   obj[i].onMouseDown=function() {
+
+    this.className+=(this.className.length>0? " ": "") + "sfhover";
+
+   }
+
+   obj[i].onMouseUp=function() {
+
+    this.className+=(this.className.length>0? " ": "") + "sfhover";
+
+   }
+
+   obj[i].onmouseout=function() {
+
+    this.className=this.className.replace(new RegExp("( ?|^)sfhover//b"), "");
+
+   }
+
+}
+
+}
+
+function DoMenu(emid)
+
+{
+
+var obj = document.getElementById(emid);
+
+obj.className = (obj.className.toLowerCase() == "expanded"?"collapsed":"expanded");
+
+if((LastLeftID!="")&&(emid!=LastLeftID)) //关闭上一个Menu
+
+{
+
+   document.getElementById(LastLeftID).className = "collapsed";
+
+}
+
+LastLeftID = emid;
+
+}
+
+function GetMenuID()
+
+{
+
+var MenuID="";
+
+var _paramStr = new String(window.location.href);
+
+var _sharpPos = _paramStr.indexOf("#");
+
+if (_sharpPos >= 0 && _sharpPos < _paramStr.length - 1)
+
+{
+
+   _paramStr = _paramStr.substring(_sharpPos + 1, _paramStr.length);
+
+}
+
+else
+
+{
+
+   _paramStr = "";
+
+}
+
+if (_paramStr.length > 0)
+
+{
+
+   var _paramArr = _paramStr.split("&");
+
+   if (_paramArr.length>0)
+
+   {
+
+    var _paramKeyVal = _paramArr[0].split("=");
+
+    if (_paramKeyVal.length>0)
+
+    {
+
+     MenuID = _paramKeyVal[1];
+
+    }
+
+   }
+
+   /*
+
+   if (_paramArr.length>0)
+
+   {
+
+    var _arr = new Array(_paramArr.length);
+
+   }
+
+  
+
+   //取所有#后面的，菜单只需用到Menu
+
+   //for (var i = 0; i < _paramArr.length; i++)
+
+   {
+
+    var _paramKeyVal = _paramArr[i].split('=');
+
+   
+
+    if (_paramKeyVal.length>0)
+
+    {
+
+     _arr[_paramKeyVal[0]] = _paramKeyVal[1];
+
+    }  
+
+   }
+
+   */
+
+}
+
+if(MenuID!="")
+
+{
+
+   DoMenu(MenuID)
+
+}
+
+}
+
+GetMenuID(); //*这两个function的顺序要注意一下，不然在Firefox里GetMenuID()不起效果
+
+menuFix();
+
+--></script>
+<div class="link">
+	<ul>
+    	<li><a href="#">暖暖魔力防晒</a></li>
+        <li><a href="#">暖暖魔力防晒</a></li>
+        <li><a href="#">暖暖魔力防晒</a></li>
+        <li><a href="#">暖暖魔力防晒</a></li>
+    </ul>
+    <div style="clear:both;"></div>
+</div>
+<div class="footer">
+	<p>版权声明版权声明版权声明版权声明版权声明版权声明版权声明版权声明版权声明</p>
+</div>
+</body>
+</html>

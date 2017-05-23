@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input,menu,section,article,aside,nav {
+margin: 0px;
+padding: 0px;
+border: none;
+outline: 0px;
+font-size: 100%;
+background:none;
+
+}
+
+ol, ul {list-style: none;}
+img,input{border:0;}
+input{border:0;}
+body{ font-family:microsoft yahei; font-size:14px; background:#fff;}
+a { color:#343434; text-decoration:none;}
+a:hover { color:#ba1814; text-decoration:none;}
+.clear{ clear:both;}
+.head .top{ height:32px; line-height:32px; width:100%; border-bottom:1px solid #eee;}
+.head .top .top-nav{width:1000px; margin:0 auto; cursor:pointer }
+.head .top ul{ float:right; }
+.head .top ul li{ float:left; padding-right:20px;}
+.head .top ul li a{ color:#494949;}
+.head .top ul li.hi-yk a{ color:#ba1814}
+.head-cont{width:1000px; margin:0 auto; margin-top:20px;}
+.logo-img{float:left; width:180px;}
+.logo-wz{ float:left; width:260px; margin-top:10px; font-size:26px;}
+.logo-wz a{ color:#393939;}
+.search{margin-top:30px; float:left; border:none; background:url(images/icon-search.png) 210px center no-repeat; width:300px;}
+.ipt-search{ width:203px; border:0px;  border:1px solid #A0A0A0; height:30px; border-radius:20px; -moz-border-radius:20px;-webkit-border-radius:20px;-o-border-radius:20px; -ms-border-radius:20px; padding-left:5px; color:#CCC}
+.menu{height:80px;background:#efefef;position:relative;}
+.menu .nav{width:960px;height:80px;margin:0 auto; z-index:99;}
+.menu .nav li{float:left;font-size:14px;}
+.menu .nav li a{float:left;display:block;height:80px;padding:0 30px;line-height:90px;color:gray;text-decoration:none;position:relative;overflow:hidden;}
+.menu .nav li a:hover,.menu .nav li a.current{background:#000;color:#fff;}
+.menu .nav li .box{width:960px;height:50px;position:absolute;top:80px;left:203px;*left:190px;left:198px\0;background:#000;display:none;z-index:99;}
+.menu .nav li .box a{display:block;height:50px;float:left;color:#fff;line-height:50px;border:none;background:none;padding:0;width:118px;text-align:center;}
+.menu .nav li .box a:hover{text-decoration:underline;color:#46bd01}
+
+
+
+
+
+</style>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	
+	var winw = parseInt($(window).width());
+	$('.menu .nav .box').css({'padding-left':(winw-960)/2,'padding-right':(winw-960)/2,'margin-left':-(winw-960)/2});
+	
+	var navLi=$(".menu .nav li");
+	navLi.mouseover(function () {
+		$(this).find("a").addClass("current");
+		$(this).find(".box").stop().slideDown(200);
+	})
+	navLi.mouseleave(function(){
+		$(this).find("a").removeClass("current");
+		$(this).find(".box").stop().slideUp(200);
+	})
+})
+</script>
+<link rel="stylesheet" type="text/css" href="css/lrtk.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body style=" font-family:microsoft yahei;">
+<div class="head">
+	<div class="top">
+    	<div class="top-nav">
+        	<ul>
+        		<li class="hi-yk"><a href="#">Hi:游客</a></li>
+            	<li class="hi-yk" style="padding-right:10px;"><a href="login.jsp">请登录</a></li>
+            	<li class="hi-yk" style="padding-right:10px;"><span style="padding-right:10px; color:#c0c0c0">|</span><a href="zhuce.jsp">注册</a></li>
+            	<li style=" background:url(images/gwc-black.png) 10px center no-repeat; "><span style="padding-right:10px; color:#c0c0c0">|</span><a href="index-nn.html"><span style="padding-left:20px;">魔力商城</span></a></li>
+        	</ul>
+        </div>
+    </div>
+    <div class="head-cont">
+    	<div class="logo-img"><a href="#"><img src="images/logo.png" /></a></div>
+        <div class="logo-wz"><a href="#">暖暖魔力官方网站<br /><span style="font-size:13px; line-height:24px; display:block;">官方唯一授权旗舰店  100%正品保证</span></a></div>
+        <div class="search">
+        	<input type="search" value="搜索" class="ipt-search" onfocus="if(this.value==defaultValue)  {this.value='';} this.style.color = '#000000'" onblur="if(!value) {value=defaultValue;} this.style.color = '#000000'" />
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="menu">
+		<ul class="nav">
+			<li>
+				<a href="#">网站首页</a>
+				<div class="box">
+					<a href="#">菜单一</a>
+					<a href="#">菜单二</a>
+				</div>
+			</li>
+			<li><a href="#">暖暖魔力</a>
+            	<div class="box">
+					<a href="#">菜单一</a>
+					<a href="#">菜单二</a>
+				</div>
+            </li>
+			<li>
+				<a href="#">商品中心</a>
+				<div class="box">
+					<a href="#">菜单一</a>
+					<a href="#">菜单二</a>
+				</div>
+			</li>
+			<li>
+				<a href="#">经销商</a>
+				<div class="box">
+					<a href="#">菜单一</a>
+					<a href="#">菜单二</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="container-fluid text-center" style="border-bottom:5px solid #5bbaf1;">
+    <div class="header">
+        <img class="headerImg"
+             src="images/header.jpg"
+             data-slideshow='images/banner01.jpg|images/header.jpg|images/banner01.jpg'>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.hammer-full.min.js"></script>
+<script src="js/plugin.js"> </script>
+<script src="js/lrtk.js"></script>
+<script>
+var links = ["http://www.lanrentuku.com", "http://www.lanrentuku.com/lanren/", "http://www.lanrentuku.com/js/biaoqian.html", "http://www.lanrentuku.com/js/xiangce.html"];
+$(".slide").click(function(){
+    var index = $(this).attr('index');
+	if(index === undefined) {
+		window.open(links[0]);
+	} else {
+		window.open(links[(parseInt(index)+1)]);
+	}
+
+});
+</script>
+<div style="width:100%; background:#f3fbff; height:69px;">
+	<div class="nnml-ads">
+	<div class="ads-left-tit">暖暖魔力公告</div>
+    <div class="ads-right">
+    	<MARQUEE direction=up height=69 scrollAmount=3 scrollDelay=150 width=400>
+            <p style="height:69px; line-height:69px; font-size:16px;"><span style="float:right; font-size:14px; color:#868f98">2015-06-10</span>如果你听见风中有些动静</p>
+            <p style="height:69px; line-height:69px; font-size:16px;"><span style="float:right; font-size:14px; color:#868f98">2015-06-10</span>可能是我在想你...</p>
+            <p style="height:69px; line-height:69px; font-size:16px;"><span style="float:right; font-size:14px; color:#868f98">2015-06-10</span>如果你发现梦中有些迷语,</p>
+            <p style="height:69px; line-height:69px; font-size:16px;"><span style="float:right; font-size:14px; color:#868f98">2015-06-10</span>就是我在呼唤你...</p>
+       </MARQUEE>
+    </div>
+    <div style="flaot:right; line-height:69px;"><a href="#" style="color:#f0403c; text-decoration:none; font-weight:bold; font-size:16px;">more</a></div>
+</div>
+</div>
+<div class="nnml-main">
+	<div style="width:912px; margin:0 auto; margin-bottom:20px; margin-top:40px;"><img src="images/nnml-tit.png" /></div>
+	<div class="nnml-div">
+        <div style="width:1000px; margin:0 auto; position:relative; *margin-top:-15px;">
+        	<div class="media">
+                <h3>媒体报道</h3>
+                <div class="media-img">
+                    <a href="#"><img src="images/media-img_03.jpg" /></a>
+                    <p><a href="#">思埠健康修身尺今日上市</a></p>
+                </div>
+                <div class="media-list">
+                    <ul>
+                        <li><a href="#">“芸豆豆”牵手“好管家”为您的健康护航</a></li>
+                        <li><a href="#">“芸豆豆”牵手“好管家”为您的健康护航</a></li>
+                        <li><a href="#">“芸豆豆”牵手“好管家”为您的健康护航</a></li>
+                        <li><a href="#">“芸豆豆”牵手“好管家”为您的健康护航</a></li>
+                    </ul>
+                </div>
+                <div class="media-btn"><input type="button" value="查看更多" class="btn-more"/></div>
+    		</div>
+            <div class="public">
+            	<h3>公益事业</h3>
+                <div class="media-img">
+                    <a href="#"><img src="images/public-img_05.jpg" /></a>
+                    <p><a href="#">思埠健康修身尺今日上市</a></p>
+                </div>
+                <div class="media-list">
+                    <ul>
+                        <li><a href="#">“芸豆豆”牵手“好管家”为您的健康护航</a></li>
+                        <li><a href="#">“芸豆豆”牵手“好管家”为您的健康护航</a></li>
+                        <li><a href="#">“芸豆豆”牵手“好管家”为您的健康护航</a></li>
+                        <li><a href="#">“芸豆豆”牵手“好管家”为您的健康护航</a></li>
+                    </ul>
+                </div>
+                <div class="media-btn"><input type="button" value="查看更多" class="btn-more"/></div>
+            </div>
+            <div class="video">
+            	<h3>媒体报道</h3>
+                <div class="media-img">
+                    <a href="#"><img src="images/video-img_07.jpg"/></a>
+                    <p><a href="#">思埠健康修身尺今日上市</a></p>
+                </div>
+                <div class="media-list">
+                    <ul>
+                        <li><a href="#">“芸豆豆”牵手“好管家”为您的健康护航</a></li>
+                        <li><a href="#">“芸豆豆”牵手“好管家”为您的健康护航</a></li>
+                        <li><a href="#">“芸豆豆”牵手“好管家”为您的健康护航</a></li>
+                        <li><a href="#">“芸豆豆”牵手“好管家”为您的健康护航</a></li>
+                    </ul>
+                </div>
+                <div class="media-btn"><input type="button" value="查看更多" class="btn-more"/></div>
+            </div>
+            <div class="nnml-cont01">
+                <h3>媒体报道</h3>
+                <p>暖暖魔力  美人的养成不仅需要充足的睡眠，更要睡前护理哦！夜间是修护肌肤的最佳时机，甚至有的护肤动作比白天做更有效</p>
+        	</div>
+            <div class="nnml-cont02">
+            	<h3>媒体报道</h3>
+                <p>暖暖魔力  美人的养成不仅需要充足的睡眠，更要睡前护理哦！夜间是修护肌肤的最佳时机，甚至有的护肤动作比白天做更有效</p>
+            </div>
+        	<div class="nnml-cont03">
+            	<h3>媒体报道</h3>
+                <p>暖暖魔力  美人的养成不仅需要充足的睡眠，更要睡前护理哦！夜间是修护肌肤的最佳时机，甚至有的护肤动作比白天做更有效</p>
+            </div>
+		</div>
+    </div>
+    	
+        
+
+</div>
+</body>
+</html>

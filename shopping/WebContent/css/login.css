@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+.login-header{width:1000px; margin:0px auto; margin-top:20px;}
+.logo-img{float:left; width:180px; padding-left:100px;}
+.logo-wz{ float:left; width:260px; margin-top:10px; font-size:26px;}
+.logo-wz a{ color:#393939;}
+.login-main{width:1000px; margin:0 auto; background:url(../images/fc6df7c6551f457d84c543a8168d143b.jpg) no-repeat;height:562px;}
+.login-main-right{ float:right; margin-top:60px; padding-right:120px;}
+.login-tips{ line-height:36px; width:284px;}
+.tips-left{ font-size:14px; float:left; display:block;}
+.tips-right{ display:block; float:right; padding-right:10px;}
+.tips-right a{ color:#ba1814;}
+.ipt-div{ margin-top:10px;}
+.ipt-text01{width: 260px;
+height: 33px;
+line-height: 33px;
+font-size: 16px;
+padding-left: 10px;
+border: 1px solid #BFBDBF;
+border-radius: 3px;
+background-color: #FFF;
+color:#A6A6A6;
+ font-family:microsoft yahei;}
+.inputs{ margin-bottom:25px;}
+.ipt-text02{width: 160px;
+height: 33px;
+line-height: 33px;
+font-size: 16px;
+padding-left: 10px;
+border: 1px solid #BFBDBF;
+border-radius: 3px;
+background-color: #FFF;
+color:#A6A6A6;
+font-family:microsoft yahei;}
+.ipt-block{ display: block; float:left; margin-right:10px;}
+.img-block{ display: block; float:left; border:1px solid #BFBDBF; margin-right:5px;}
+.span-block{ display: block; float:left; line-height:35px;}
+.btn-login{width:140px; height:40px; border-radius:3px; background:#ba1814; color:#fff;font-family:microsoft yahei; font-size:14px; cursor:pointer;}
+.rules span a{ color:#ba1814;}
+.link{ width:100%; margin-top:20px; background:#FFF; border-top:1px solid #ccc;}
+.link ul{width:1000px; margin:0 auto; margin-top:10px; }
+.link ul li{ float:left; margin-right:15px; line-height:24px;}
+.footer{  background:url(../images/footer_dy.jpg) center top no-repeat; width:100%; background-size:cover; height:95px;}
+.footer p{ text-align:center; padding-top:60px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
