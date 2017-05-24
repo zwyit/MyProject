@@ -184,7 +184,9 @@ jQuery(function($) {
 }); 
 //价格
 function totalPrice(){
-	var number = pars(document.getElementById("number").innerHTML);
+	//用innerHTML 或者innerText获取标签之间的文字
+	var number = parsInt(document.getElementById("number").innerHTML);
+	/* 跟表单相关的是value */
 	var price = parseFloat(document.getElementById("price").innerHTML);
 	price +=(price/number);
 	number += 1;
@@ -197,7 +199,7 @@ function addNum(){
 	var count =  parseInt(document.getElementById("count").innerHTML);//获取总数
 	if(number<count){
 		document.getElementById("number").innerHTML = number+1;
-		var price = parseInt(document.getElementById("price").innerHTML.replace("￥",""));
+		var price = parseInt(document.getElementById("price").innerHTML.replace("￥",""));//用空字符替换￥
 		var p = price*(number+1);
 		document.getElementById("tootalPrice").innerHTML ="￥"+ p.toFixed(2);//toFixed(2)保留两位小数
 	}
@@ -230,7 +232,8 @@ function reduceNum(){
             <ul class="num-jia">
             	<li class="minus"><a onclick="reduceNum()" href="#">-</a></li>
                 <li class="num"><a id="number" href="#">1</a></li>
-                <li class="plus"><a onclick="addNum()" href="#">+</a></li>
+                <li class="plus"><a onclick="addNum()" href="javascript:void(0)">+</a></li>
+                <!-- href="javascript:void(0)"防止出现滚动条转动的发生 -->
                 <li class="no-border"><p id="tootalPrice">￥${product.price}</p></li>
                 <div class="clear"></div>        
             </ul>
