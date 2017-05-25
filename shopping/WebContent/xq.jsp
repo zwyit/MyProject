@@ -216,8 +216,11 @@ function reduceNum(){
 		document.getElementById("tootalPrice").innerHTML ="￥"+price;
 	}
 }
-
-
+//向购物车传递参数
+function _updateCart() {
+	location.href="AddCartServlet?product_id=${product.id}&count=" 
+			+parseInt(document.getElementById("number").innerHTML);
+}
 </script>
 	<!--<div class="xq-main-left"><img src="images/1416570_350_350.jpg" /></div>-->
     <div class="xq-main-right">
@@ -241,7 +244,8 @@ function reduceNum(){
         </div>
         <div class="xq-gwc">
         	<img src="images/gwc-bg.png" />
-            <span>加入购物车</span>
+            <a href="javascript:_updateCart();">
+            <span>加入购物车</span></a>
         </div>
     </div>
     <div class="clear"></div>

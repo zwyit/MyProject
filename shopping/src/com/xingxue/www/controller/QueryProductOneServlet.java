@@ -47,19 +47,19 @@ public class QueryProductOneServlet extends HttpServlet {
 //		System.out.println(name);
 		//获取查看商品的id
 		Integer id=Integer.parseInt(request.getParameter("id"));
-		System.out.println("id:"+id);
+//		System.out.println("id:"+id);
 		
 		//获取商品对象
 		Product product=productService.selectOne(id);
-		System.out.println(product);
+//		System.out.println(product);
 		request.setAttribute("product", product);
 		//获取商品品牌
 		Brand brand=brandService.selectOne(product.getBrand_id());
-		System.out.println(brand);
+//		System.out.println(brand);
 		request.setAttribute("brand", brand);
 		//获取类别
 		Category category=categoryService.selectOne(product.getCategory_id());
-		System.out.println(category);
+//		System.out.println(category);
 		request.setAttribute("category", category);
 		
 		request.getRequestDispatcher("xq.jsp").forward(request,response);

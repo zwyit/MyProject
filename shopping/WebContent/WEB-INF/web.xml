@@ -62,4 +62,44 @@
     <servlet-name>QueryProductOneServlet</servlet-name>
     <url-pattern>/QueryProductOneServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddCartServlet</display-name>
+    <servlet-name>AddCartServlet</servlet-name>
+    <servlet-class>com.xingxue.www.controller.AddCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddCartServlet</servlet-name>
+    <url-pattern>/AddCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteCartServlet</display-name>
+    <servlet-name>DeleteCartServlet</servlet-name>
+    <servlet-class>com.xingxue.www.controller.DeleteCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteCartServlet</servlet-name>
+    <url-pattern>/DeleteCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>QueryCartServlet</display-name>
+    <servlet-name>QueryCartServlet</servlet-name>
+    <servlet-class>com.xingxue.www.controller.QueryCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QueryCartServlet</servlet-name>
+    <url-pattern>/QueryCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ModiCartServlet</display-name>
+    <servlet-name>ModiCartServlet</servlet-name>
+    <servlet-class>com.xingxue.www.controller.ModiCartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ModiCartServlet</servlet-name>
+    <url-pattern>/ModiCartServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

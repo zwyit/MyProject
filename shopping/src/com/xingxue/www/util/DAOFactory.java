@@ -1,10 +1,12 @@
 package com.xingxue.www.util;
 
 import com.xingxue.www.dao.BrandDAO;
+import com.xingxue.www.dao.CartDAO;
 import com.xingxue.www.dao.CategoryDAO;
 import com.xingxue.www.dao.ProductDAO;
 import com.xingxue.www.dao.UserDAO;
 import com.xingxue.www.dao.imp.BrandDAOImpl;
+import com.xingxue.www.dao.imp.CartDAOImpl;
 import com.xingxue.www.dao.imp.CategoryDAOImpl;
 import com.xingxue.www.dao.imp.ProductDAOImpl;
 import com.xingxue.www.dao.imp.UserDAOImpl;
@@ -26,5 +28,8 @@ public class DAOFactory {
 	public static CategoryDAO getCategoryDAO(){
 		return new CategoryDAOImpl();
 	}
-	
+	//¹ºÎï³µ
+	public static CartDAO getCartDao(){
+		return new CartDAOImpl();
+	}
 }

@@ -50,10 +50,10 @@ public class QueryProductServlet extends HttpServlet {
 		if(count!=0){
 			//总记录数
 			totalCount=count;
-			System.out.println("总记录数:"+totalCount);
+//			System.out.println("总记录数:"+totalCount);
 			//总页数
 			totalPage=totalCount%rows==0?totalCount/rows:totalCount/rows+1;
-			System.out.println("总页数:"+totalPage);
+//			System.out.println("总页数:"+totalPage);
 			//存总记录数
 			request.getSession().setAttribute("totalCount", totalCount);
 			//存总页数

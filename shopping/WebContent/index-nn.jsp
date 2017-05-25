@@ -350,7 +350,7 @@ p.price {
 	<span style="right:360px; top: 10px; position: absolute;"><a
 		href="zhuce.jsp">|&nbsp;注册&nbsp;</a></span>
 	<span style="right: 310px; top: 10px; position: absolute;"><a
-		href="cart.html">购物车</a></span>
+		href="QueryCartServlet">购物车</a></span>
 	<span style="right: 245px; top: 10px; position: absolute;"><a
 		href="order.html">我的订单</a></span>
 	<span style="right: 180px; top: 10px; position: absolute;"><a
