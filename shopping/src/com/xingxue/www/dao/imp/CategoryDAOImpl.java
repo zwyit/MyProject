@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.xingxue.www.dao.CategoryDAO;
 import com.xingxue.www.entity.Category;
-import com.xingxue.www.util.JdbcUtil;
+import com.xingxue.www.util.JdbcUtilC3P0;
 
 public class CategoryDAOImpl implements CategoryDAO {
 
@@ -28,12 +28,12 @@ public class CategoryDAOImpl implements CategoryDAO {
 
 	@Override
 	public List<Category> selectAll() {
-		return JdbcUtil.findList(Category.class, "select * from t_category");
+		return JdbcUtilC3P0.findList(Category.class, "select * from t_category");
 	}
 
 	@Override
 	public Category selectOne(Integer id) {
-		return JdbcUtil.findOne(Category.class, "select * from t_category where id=?", id);
+		return JdbcUtilC3P0.findOne(Category.class, "select * from t_category where id=?", id);
 	}
 
 }
