@@ -1,0 +1,285 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PrepareOrder</title>
+<link href="css/reset.css" type="text/css" />
+<link href="css/index.css" type="text/css" />
+<style>
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input,menu,section,article,aside,nav {
+margin: 0px;
+padding: 0px;
+border: none;
+outline: 0px;
+font-size: 100%;
+background:none;
+}
+ol, ul {
+list-style: none;
+}
+body { background:#FFF; font-family:"微软雅黑"; font-size:12px; color:#333; }
+
+a { color:#3366cc; text-decoration:none;}
+
+a:hover { color:#ba1814; text-decoration:none;}
+
+.DivClear { clear:both; line-height:0px;}
+
+textarea{ resize:none;}
+.qrdz-ym{ width:1000px; margin:0 auto;}
+.qrdz-top{position:relative; height:40px; line-height:55px; border-bottom:2px solid #f1f1f1; font-size:14px; margin-bottom:20px;}
+.qrdz-glsh{position:absolute; right:10px; display:block; top:0; color:#3366cc;}
+a.qrdz-glsh:hover{color:#ba1814;}
+.qrdz-cont ul li.li-xz{ border:1px solid #ba1814; height:33px; line-height:33px; background:url(images/dw-icon.png) 10px center no-repeat; padding-left:30px; font-size:14px; font-weight:bold; margin-bottom:5px; background-color:#fdf2f2;}
+.em-spad{ padding-right:5px;}
+.li-pad{padding-left:75px; line-height:28px; font-size:14px;}
+.phone-col{ color:#808080; font-size:12px;}
+.pad-spa{ padding-left:10px;}
+.qrdz-cont00{width:1000px; margin:0 auto; margin-top:50px;}
+.qrdz-table{ font-size:14px;}
+.td-bott { border-bottom:3px solid #b2d1ff; }
+.qrdx-cont{ text-align:right; border-bottom:1px dotted #b2d1ff; padding-bottom:5px;}
+.td-bg{ background:#f2f7ff;}
+
+.link{ width:100%; margin-top:20px; background:#FFF; border-top:1px solid #ccc;}
+.link ul{width:1000px; margin:0 auto; margin-top:10px; }
+.link ul li{ float:left; margin-right:15px; line-height:24px;}
+.link ul li a{ color:#343434;}
+.footer{  background:url(images/footer_dy.jpg) center top no-repeat; width:100%; background-size:cover; height:95px;}
+.footer p{ text-align:center; padding-top:60px;}
+ 
+ #brg{ width:100%; height:100%; background:#333; position:absolute; top:0; left:0; filter:alpha(opacity=60); -moz-opacity:0.6; opacity: 0.6; position:absolute; top:0; left:0; display:none;}
+   #showdiv{ width:100%; height:auto; position:absolute; left:0; top:0; z-index:20; display:none; }
+   #testdiv{ width:1000px; height:600px; margin:0 auto; border:1px solid #4d4d4d; background:#f2f2f2; margin-top:5px;}
+   #close{ cursor:pointer;  }
+   .btn{ margin:0px auto auto 20px; height:27px; line-height:27px; font-size:14px; font-weight:bold;   cursor:pointer;}
+.right-td{ text-align:right; line-height:32px;}
+.right-td span{ color:#ba1814;line-height:32px; padding-left:5px;padding-right:5px;}
+.shdz-cont01-slider{margin-top:20px;}
+.table-ddd tr td{border-bottom:1px solid #e7e7e7;}
+.cont02-td-bor{ background:#f2f2f2;}
+.del a{ color:#3366cc;}   
+   
+   
+</style>
+ <script type="text/javascript" src="js/jquery1.3.2.js"></script>
+ <script type="text/javascript">
+   $(document).ready(function(){
+      var bheight=document.body.clientHeight;
+      $("#lay").click(function(){
+   $("#brg").css("display","block");
+   $("#showdiv").css("display","block");
+   //$("#testdiv").load("test.html");
+   });
+   $("#close").click(function(){
+      $("#brg").css("display","none");
+   $("#showdiv").css("display","none");
+   //$("#testdiv").load("");
+   });
+   });
+ </script>
+ <link href="css/reset.css" type="text/css" rel="stylesheet"/>
+<link href="css/login.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+<span style="right:350px; top:10px; position:absolute;"><a href="index-nn.html">暖暖魔力</a></span>
+<span style="right:320px; top:10px; position:absolute;"><a href="login.html">登录</a></span><span style="right:260px; top:10px; position:absolute;"><a href="zhuce.html">|&nbsp;&nbsp;注册&nbsp;&nbsp;|&nbsp;</a></span><span style="right:210px; top:10px; position:absolute;"><a href="cart.html">购物车</a></span><span style="right:145px; top:10px; position:absolute;"><a href="QueryOrderListServlet">我的订单</a></span>
+<span style="right:100px; top:10px; position:absolute;"><a href="sc.html">收藏夹</a></span>
+<div class="login-header">
+	<div class="logo-img"><a href="#"><img src="images/logo.png" /></a></div>
+        <div class="logo-wz"><a href="#">暖暖魔力官方网站<br /><span style="font-size:13px; line-height:24px; display:block;">官方唯一授权旗舰店  100%正品保证</span></a></div>
+        <div class="DivClear"></div>
+</div>
+<div class="qrdz-ym">
+    <div class="qrdz-top">
+      <h3 class="qrdz-tit">确认收货地址</h3>
+      <a href="#" class="qrdz-glsh">管理收货地址</a>
+    </div>
+    <div class="qrdz-cont">
+      <ul>
+        <li class="li-xz">
+          <span class="dzs">寄送至</span>
+          <input type="radio" name="fname" value="George"  />
+          <span class="pad-spa">陕西省<em class="em-spad"></em>西安市<em class="em-spad"></em>雁塔区<em class="em-spad"></em>大雁塔街道<em class="em-spad"></em>雁塔路34号雁塔小区1单元1101室（呵呵收）</span>
+          <span style=" color:#808080; padding-right:20px;">15000000111</span>  
+          <span style="font-weight:normal; color:#808080; padding-right:130px;">默认地址</span>  
+          <a href="#" style="font-weight:normal;">修改本地址</a>
+        </li>
+        <li class="li-pad">
+          <input type="radio" name="fname" value="George"  />
+          <span class="pad-spa">陕西省<em class="em-spad"></em>西安市<em class="em-spad"></em>雁塔区<em class="em-spad"></em>大雁塔街道<em class="em-spad"></em>雁塔路34号雁塔小区1单元1101室（呵呵收）</span>
+          <span class="phone-col">15000000111</span>
+        </li>
+        <li class="li-pad">
+          <input type="radio" name="fname" value="George"  />
+          <span class="pad-spa">陕西省<em class="em-spad"></em>西安市<em class="em-spad"></em>雁塔区<em class="em-spad"></em>大雁塔街道<em class="em-spad"></em>雁塔路34号雁塔小区1单元1101室（呵呵收）</span>
+          <span class="phone-col">15000000111</span>
+        </li>
+        <li class="li-pad">
+          <input type="radio" name="fname" value="George"  />
+          <span class="pad-spa">陕西省<em class="em-spad"></em>西安市<em class="em-spad"></em>雁塔区<em class="em-spad"></em>大雁塔街道<em class="em-spad"></em>雁塔路34号雁塔小区1单元1101室（呵呵收）</span>
+          <span class="phone-col">15000000111</span>
+        </li>
+        <li class="li-pad">
+          <input type="radio" name="fname" value="George"  />
+          <span class="pad-spa">陕西省<em class="em-spad"></em>西安市<em class="em-spad"></em>雁塔区<em class="em-spad"></em>大雁塔街道<em class="em-spad"></em>雁塔路34号雁塔小区1单元1101室（呵呵收）</span>
+          <span class="phone-col">15000000111</span>
+        </li>
+      </ul>
+      <div style="padding-left:85px; line-height:28px; font-size:14px;" id="lay" class="btn">新增收货地址</div>
+     <div id="brg"></div>
+     <div id="showdiv">
+       
+       <div id="testdiv" style="position:relative;">
+       		<div id="close" style="position:absolute; top:10px; right:10px;"><img src="images/close-img.png" /></div>
+            <div class="xzdz-box">
+            	<h3 style="padding:30px; font-size:14px;">添加收货地址</h3>
+                <p style="padding-left:70px;"><span style="color:#ba1814; padding-right:10px;">新增收货地址</span>电话号码、手机号选填一项</p>
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="shdz-table01">
+                	<tr height="45">
+                    	<td class="right-td">所在地区<span>*</span></td>
+                        <td >
+                        	<select style="border:1px solid #dbd6d0; width:295px;height:28px; padding-left:3px; color:#a9a9a9; line-height:28px;">
+                            	<option>请选择省市区</option>
+                                <option>请选择省市区</option>
+                                <option>请选择省市区</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr height="45">
+                    	<td class="right-td" valign="top">详细地址<span>*</span></td>
+                        <td >
+                        	<textarea  style=" resize:none;color:#a9a9a9; border:1px solid #dbd6d0; width:283px;line-height:28px; padding-left:8px; font-size:12px;" onfocus="if(this.value==defaultValue)  {this.value='';} this.style.color = '#000000'" onblur="if(!value) {value=defaultValue;} this.style.color = '#000000'">建议您如实填写详细收货地址，例如街道名称，门牌号码，楼层和房间号等信息</textarea>
+                        </td>
+                    </tr>
+                    <tr height="45">
+                    	<td class="right-td" style="padding-right:5px;">邮政编码</td>
+                        <td ><input style="color:#a9a9a9; width:198px; height:28px; padding-left:6px; border:1px solid #dbd6d0; line-height:28px;" type="text" onfocus="if(this.value==defaultValue)  {this.value='';} this.style.color = '#000000'" onblur="if(!value) {value=defaultValue;} this.style.color = '#000000'" value="如您不清楚邮递区号，请填写000000"  /></td>
+                    </tr>
+                    <tr height="45">
+                    	<td class="right-td">收货人姓名<span>*</span></td>
+                        <td ><input type="text" value="长度不超过25个字符" style="color:#a9a9a9; width:198px; height:28px; padding-left:6px; border:1px solid #dbd6d0;line-height:28px;" onfocus="if(this.value==defaultValue)  {this.value='';} this.style.color = '#000000'" onblur="if(!value) {value=defaultValue;} this.style.color = '#000000'"/></td>
+                    </tr>
+                    <tr height="37">
+                    	<td class="right-td" style="padding-right:5px;">手机号码</td>
+                        <td ><input type="text" value="电话号码，手机号码必须填一项" style="width:198px; height:28px; padding-left:6px; border:1px solid #dbd6d0;line-height:28px; color:#a9a9a9;" onfocus="if(this.value==defaultValue)  {this.value='';} this.style.color = '#000000'" onblur="if(!value) {value=defaultValue;} this.style.color = '#000000'"/></td>
+                    </tr>
+                    <tr height="45">
+                    	<td width="15%" class="right-td" style="padding-right:5px;">电话号码</td>
+                        <td width="85%"><input value="区号" type="text"/  style="color:#a9a9a9; width:65px; height:28px; padding-left:6px; border:1px solid #dbd6d0;line-height:28px;" onfocus="if(this.value==defaultValue)  {this.value='';} this.style.color = '#000000'" onblur="if(!value) {value=defaultValue;} this.style.color = '#000000'">
+                        <input value="电话号码" type="text"/ style=" color:#a9a9a9;width:65px; height:28px; padding-left:6px; border:1px solid #dbd6d0; line-height:28px;" onfocus="if(this.value==defaultValue)  {this.value='';} this.style.color = '#000000'" onblur="if(!value) {value=defaultValue;} this.style.color = '#000000'"></td>
+                    </tr>
+                    <tr height="35">
+                    	<td colspan="2" style="padding-left:125px;">
+                        	<input type="checkbox" />
+                            <span>设置为默认收货地址</span>
+                        </td>
+                    </tr>
+                    <tr height="35">
+                    	<td colspan="2" style="padding-left:125px;"><input style="width:70px; height:28px; line-height:32px; background:#ba1814; color:#FFF; border-radius:5px; cursor:pointer; border:0;" type="button" value="保存" /></td>
+                    </tr>
+                </table>
+            </div>
+       </div>
+     </div>   
+    </div>
+</div>
+<div class="qrdz-cont00">
+	<div style=" color:#404040; font-size:14px; font-weight:bold; margin-bottom:20px;">确认订单信息</div>
+	<div class="qrdz-cont-slider">
+    	<table cellpadding="0" cellspacing="0" border="0" class="qrdz-table" width="100%">
+            <tr height="30">
+                <td colspan="2" class="td-bott" align="center" ><span>店铺宝贝</span></td>
+                <td class="td-bott" align="center"><span>单价（元）</span></td>
+                <td class="td-bott" align="center"><span>数量</span></td>
+                <td class="td-bott" align="center"><span>优惠方式（元）</span></td>
+                <td class="td-bott" align="center"><span>小计（元）</span></td>
+            </tr> 
+            <tr height="50" valign="bottom">
+            	<td colspan="6" class="qrdx-cont" >满79元，免运费</td>
+            </tr>
+            	<!-- 设置总价 -->
+            <c:set var="totalAllPrice" value="0" />
+            <c:forEach items="${carts}" var="cart">
+            <c:set var="totalAllPrice" value="${totalAllPrice + cart.product.price * cart.num }" />
+	            <tr height="80">
+	            	<td width="5%" class="qrdx-cont" style="text-align:left;"><img src="images/img-061201.jpg" /></td>
+	                <td width="40%" class="qrdx-cont" style="text-align:left; padding-left:10px;">
+	                	<p >${cart.product.name}</p>
+	                    <p style="color:#808080; font-size:12px;">72小时内发货</p>
+	                </td>
+	                <td  width="15%" class="qrdx-cont" style="text-align:center;">${cart.product.price}</td>
+	                <td  width="10%" class="qrdx-cont" style="text-align:center;">${cart.num}</td>
+	                <td  width="20%" class="qrdx-cont" style="text-align:center;">无优惠</td>
+	                <td  width="10%" class="qrdx-cont" style="text-align:center; color:#ba1814; font-weight:bold;">${cart.xiaoji}</td>
+	            </tr>
+	        </c:forEach>
+            <tr height="50">
+                <td colspan="3" class="td-bg" >
+                <span>给卖家留言</span>
+                <input type="text" style="width:395px; height:25px; border:1px solid #b2d1ff; font-size:12px; color:#a9a9a9;"onfocus="if(this.value==defaultValue)  {this.value='';} this.style.color = '#000000'" onblur="if(!value) {value=defaultValue;} this.style.color = '#000000'"  value="选填：对本次交易的说明（建议填写已经和卖家达成一致的说明）"/>
+                </td>
+                <td class="td-bg" style="text-align:center;">运送方式</td>
+                <td class="td-bg" style="text-align:center;">
+                    <input type="radio"  />
+                    普通配送
+                    <select>
+                      <option>快递免邮</option>
+                      <option>快递免邮</option>
+                      <option>快递免邮</option>
+                    </select>
+             </td>
+                <td class="td-bg" style="text-align:center; color:#ba1814; font-weight:bold;">0.00</td>
+            </tr>
+            <tr height="40">
+            	<td colspan="3" class="td-bg"></td>
+                <td class="td-bg" style="text-align:center;">发货时间：</td>
+                <td  colspan="2" class="td-bg" style="text-align:center;">卖家承诺订单在买家付款后，72小时内发货</td>
+            </tr>
+            <tr height="40">
+            	<td colspan="6" class="td-bg" style="text-align:right;border-bottom:1px dotted #b2d1ff;">店铺合计（含运费）： <span style="color:#ba1814; font-weight:bold; font-size:24px; padding-right:10px;">${totalAllPrice}元</span></td>
+            </tr>
+    	</table>
+    </div>
+    <div class="xx-box" style="margin-top:30px; border:1px solid #ba1814; width:418px; float:right; text-align:right; padding-right:10px; font-size:14px;">
+    	<p>
+        	<span style=" font-weight:bold; ">实付款：</span>
+            <span style=" color:#999999;"></span>
+            <span style="font-size:36px; color:#ba1814;">${totalAllPrice}元</span>
+        </p>
+        <p style="line-height:36px;">
+        	<span style=" font-weight:bold;">寄送至：</span>
+            <span style="font-size:12px;"> 陕西省西安市雁塔区大雁塔街道雁塔路34号雁塔小区1单元1101室</span>
+        </p>
+        <p style=" margin-bottom:20px;">
+        	<span style=" font-weight:bold;">收货人：</span>
+            <span style="font-size:12px;">呵呵 15000001111</span>
+        </p>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="gwc-btn" style="float:right;">
+    	<span style="display:block; float:left; font-size:14px; margin-right:30px; margin-top:10px;"><a href="QueryCartServlet">返回购物车</a></span>
+        <input type="button" onclick="window.location='CommitOrderServlet'" value="提交订单" style="display:block; float:left; background:#ba1814; width:125px; height:35px; color:#FFF;  font-size:14px; cursor:pointer;" />
+        <div style="clear:both;"></div>
+    </div>
+    <div style="clear:both;"></div>
+    <p style="text-align:right; line-height:36px;">若价格变动，请在提交订单后联系卖家改价，并查看已买到的宝贝</p>
+</div>
+
+<div class="link">
+	<ul>
+    	<li><a href="#">暖暖魔力防晒</a></li>
+        <li><a href="#">暖暖魔力防晒</a></li>
+        <li><a href="#">暖暖魔力防晒</a></li>
+        <li><a href="#">暖暖魔力防晒</a></li>
+    </ul>
+    <div style="clear:both;"></div>
+</div>
+<div class="footer">
+	<p>版权声明版权声明版权声明版权声明版权声明版权声明版权声明版权声明版权声明</p>
+</div>
+</body>
+</html>

@@ -112,7 +112,8 @@ if (autochangemenu!=0){start_autochange();}
 <link href="css/login.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-<span style="right:400px; top:10px; position:absolute;"><a href="index-nn.html">暖暖魔力</a></span>
+<span style="right: 480px; top: 10px; position: absolute;"><a
+		href="ExitServlet">退出</a></span>
 <span style="right:320px; top:10px; position:absolute;">
 	<c:if test="${username!=null}">
 		<a style="color: green;" href="#">${username}</a>
@@ -122,7 +123,7 @@ if (autochangemenu!=0){start_autochange();}
 	</c:if>
 </span>
 <span style="right:260px; top:10px; position:absolute;">
-<a href="zhuce.html">|&nbsp;&nbsp;注册&nbsp;&nbsp;|&nbsp;</a></span><span style="right:210px; top:10px; position:absolute;"><a href="cart.html">购物车</a></span><span style="right:145px; top:10px; position:absolute;"><a href="order.html">我的订单</a></span>
+<a href="zhuce.html">|&nbsp;&nbsp;注册&nbsp;&nbsp;|&nbsp;</a></span><span style="right:210px; top:10px; position:absolute;"><a href="cart.html">购物车</a></span><span style="right:145px; top:10px; position:absolute;"><a href="QueryOrderListServlet">我的订单</a></span>
 <span style="right:100px; top:10px; position:absolute;"><a href="sc.html">收藏夹</a></span>
 <div class="login-header">
 	<div class="logo-img"><a href="#"><img src="images/logo.png" /></a></div>

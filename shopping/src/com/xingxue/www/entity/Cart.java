@@ -17,7 +17,7 @@ public class Cart {
 	}
 	
 	public double getXiaoji() {
-		return this.product.getPrice() * num;
+		return this.product.getPrice() * this.num;
 	}
 	
 	@Override

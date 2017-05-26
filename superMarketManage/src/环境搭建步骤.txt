@@ -1,0 +1,30 @@
+--需求：账单管理的账单列表的查询
+建表语句:
+--创建账单表
+create table t_bill(
+ id number primary key,
+ code varchar2(50) not null,--账单编号
+ product_name varchar2(200) not null,--商品名称
+ product_count number not null,--商品数量
+ money number(7,2) not null,--交易金额
+ pay_status number not null ,--付款状态 0:已付1:未付
+ supplier_name varchar2(50) not null,--供应商名称
+ product_desc varchar2(200) not null,--商品描述
+ create_date date not null,--账单时间
+);
+
+--创建序列t_bill_seq
+create sequence t_bill_seq;
+
+准备:
+  1.建t_bill表
+  2.建t_bill_seq序列
+  3.config.properties拷贝到src目录
+  4.JdbcUtil.java拷贝到com.xx.util包下
+  5.建实体类Bill,放在com.xx.entity包
+  6.建BillDAO接口，放在com.xx.dao包下
+            建BillDAOImpl类，放在com.xx.dao.impl包下
+  7.建BillService接口,放在com.xx.service包下
+            建BillServiceImpl类，放在com.xx.service.impl包下
+  8.建QueryBillListServlet,放在com.xx.servlet包下                    
+  

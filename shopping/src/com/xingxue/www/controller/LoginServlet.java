@@ -40,11 +40,9 @@ public class LoginServlet extends HttpServlet {
 		if((user_name.equals(user.getUser_name()))&&(user_password.equals(user.getUser_password()))){
 			//session进行存取
 			request.getSession().setAttribute("username", user_name);
-//			request.getRequestDispatcher("QueryProductServlet").forward(request, response);
 			response.sendRedirect("QueryProductServlet?page=1");
 		}else{
 			request.setAttribute("message", "账户或密码错误，请重新登录");
-//			request.getRequestDispatcher("login.jsp").forward(request, response);
 			response.sendRedirect("login.jsp");
 		}		
 	}
