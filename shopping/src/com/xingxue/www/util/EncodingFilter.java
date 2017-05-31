@@ -37,7 +37,6 @@ public class EncodingFilter implements Filter {
 		//进行乱码处理
 		request.setCharacterEncoding(encode);
 		response.setContentType("text/html;charset="+encode);
-		
 		chain.doFilter(request, response);
 	}
 
